@@ -8,7 +8,7 @@
 
 3. Go To admin panel - Stores - Configuration - Pdf Print-outs - Invoice / Enable show tax percent
 
-4.That's it.
+4. That's it.
 
 ## Description
 

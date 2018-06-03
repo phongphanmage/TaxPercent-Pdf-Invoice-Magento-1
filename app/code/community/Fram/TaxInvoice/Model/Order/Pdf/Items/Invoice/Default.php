@@ -4,15 +4,17 @@ class Fram_TaxInvoice_Model_Order_Pdf_Items_Invoice_Default extends Mage_Sales_M
 {
     public function draw()
     {
-        if( !Mage::helper('fram_taxinvoice')->isAddedTaxPercent() )
-        {
-            return parent::draw();
-        }
+
         $order  = $this->getOrder();
         $item   = $this->getItem();
         $pdf    = $this->getPdf();
         $page   = $this->getPage();
         $lines  = array();
+
+        if( !Mage::helper('fram_taxinvoice')->isAddedTaxPercent($item->getOrderItem()->getStoreId()) )
+        {
+            return parent::draw();
+        }
 
         // draw Product name
         $lines[0] = array(array(
