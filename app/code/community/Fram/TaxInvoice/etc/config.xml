@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<config>
+    <modules>
+        <Fram_TaxInvoice>
+            <version>1.1.2</version>
+        </Fram_TaxInvoice>
+    </modules>
+
+    <global>
+        <helpers>
+            <fram_taxinvoice>
+                <class>Fram_TaxInvoice_Helper</class>
+            </fram_taxinvoice>
+        </helpers>
+        <models>
+            <fram_taxinvoice>
+                <class>Fram_TaxInvoice_Model</class>
+            </fram_taxinvoice>
+            <sales>
+                <rewrite>
+                    <order_pdf_items_invoice_default>Fram_TaxInvoice_Model_Order_Pdf_Items_Invoice_Default</order_pdf_items_invoice_default>
+                </rewrite>
+            </sales>
+        </models>
+    </global>
+</config>
